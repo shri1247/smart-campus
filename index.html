@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LOGIN ADDITIONS -->
+    <link rel="stylesheet" href="auth.css">
+    <script>if(!sessionStorage.getItem('sc_user'))location.replace('login.html');</script>
+</head>
+<body>
+
+<!-- HEADER --> 
+<header class="header">
+    <div class="college-brand">
+        <img src="images.jpg" alt="MGM Logo" class="college-logo">
+        <div class="college-name">
+            <h1>SMART CAMPUS</h1>
+            <p>MGM's College of Engineering, Nanded</p>
+            <span>Learn • Innovate • Connect • Grow</span>
+        </div>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#departments">Departments</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#notices">Notices</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section id="home" class="page">
+    <div class="hero">
+        <img src="https://mgmcen.ac.in/images/gallery/19102016161138-campus.jpg" alt="MGM Campus">
+        <h2>Welcome to Smart Campus</h2>
+        <p>Smart Campus is a digital campus management system designed to connect students, faculty and administrators on one platform.</p>
+        <p>The system helps students access notices, attendance, academic information and important campus services easily and efficiently.</p>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="page">
+    <h2 class="page-title">About MGM's College of Engineering</h2>
+    <p class="text">MGM's College of Engineering, Nanded is an engineering institution located in Nanded, Maharashtra. The campus provides students with academic facilities, laboratories, library, sports facilities, hostel and other student support services.</p>
+    <img class="about-image" src="https://mgmcen.ac.in/images/gallery/19102016163702-Inner-Courtyard.jpg" alt="MGM Inner Courtyard">
+</section>
+
+<!-- ================= DEPARTMENTS ================= -->
+<section id="departments" class="page">
+    <h2 class="page-title">Departments</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Computer Science &amp; Engineering</h3>
+            <p>Computer science and software development education.</p>
+        </div>
+        <div class="card">
+            <h3>Information Technology</h3>
+            <p>Information technology and modern computing systems.</p>
+        </div>
+        <div class="card">
+            <h3>Electronics &amp; Telecommunication</h3>
+            <p>Electronics, communication and embedded systems.</p>
+        </div>
+        <div class="card">
+            <h3>Mechanical Engineering</h3>
+            <p>Mechanical design, manufacturing and engineering.</p>
+        </div>
+        <div class="card">
+            <h3>Civil Engineering</h3>
+            <p>Construction, infrastructure and structural engineering.</p>
+        </div>
+        <div class="card">
+            <h3>Artificial Intelligence &amp; Machine Learning</h3>
+            <p>AI, machine learning and intelligent technologies.</p>
+        </div>
+        <div class="card">
+            <h3>Artificial Intelligence &amp; Data Science</h3>
+            <p>Artificial intelligence, data analysis and data science.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FACILITIES ================= -->
+<section id="facilities" class="page">
+    <h2 class="page-title">Campus Facilities</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>💻 Computer Laboratories</h3>
+            <p>Modern computer laboratories for practical learning.</p>
+        </div>
+        <div class="card">
+            <h3>📚 Central Library</h3>
+            <p>Books, journals and digital learning resources.</p>
+        </div>
+        <div class="card">
+            <h3>🏆 Sports Facilities</h3>
+            <p>Facilities for sports and student activities.</p>
+        </div>
+        <div class="card">
+            <h3>🏠 Hostel</h3>
+            <p>Accommodation facilities for students.</p>
+        </div>
+        <div class="card">
+            <h3>🍴 Canteen</h3>
+            <p>Food and refreshment facilities on campus.</p>
+        </div>
+        <div class="card">
+            <h3>📶 Wi-Fi Campus</h3>
+            <p>Internet connectivity for academic activities.</p>
+        </div>
+        <div class="card">
+            <h3>🔬 Engineering Laboratories</h3>
+            <p>Practical laboratories for engineering students.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= NOTICES ================= -->
+<section id="notices" class="page">
+    <h2 class="page-title">Notice Board</h2>
+    <div class="notice-card">
+        <span class="notice-date">29 Aug 2026</span>
+        <h3>Admission &amp; Registration Updates</h3>
+        <p>Important information regarding admission and student registration has been announced.</p>
+        <button class="main-btn">Read More</button>
+    </div>
+    <div class="notice-card">
+        <span class="notice-date">28 Aug 2026</span>
+        <h3>Upcoming Technical Event</h3>
+        <p>Students are invited to participate in the upcoming technical event organized by the college.</p>
+        <button class="main-btn">Read More</button>
+    </div>
+    <div class="notice-card">
+        <span class="notice-date">25 Aug 2026</span>
+        <h3>Internal Examination Schedule</h3>
+        <p>The internal examination schedule has been published. Students should check their examination timetable.</p>
+        <button class="main-btn">View Schedule</button>
+    </div>
+</section>
+
+<!-- ================= ATTENDANCE ================= -->
+<section id="attendance" class="page">
+    <h2 class="page-title">Student Attendance</h2>
+    <div class="attendance-summary">
+        <h3>Overall Attendance</h3>
+        <div class="attendance-number">84%</div>
+        <p>Your overall attendance is currently 84%.</p>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Classes</th>
+                    <th>Present</th>
+                    <th>Absent</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Engineering Drawing</td>
+                    <td>40</td>
+                    <td>36</td>
+                    <td>4</td>
+                    <td class="good">90%</td>
+                </tr>
+                <tr>
+                    <td>mathematics1</td>
+                    <td>38</td>
+                    <td>32</td>
+                    <td>6</td>
+                    <td class="good">84%</td>
+                </tr>
+                <tr>
+                    <td>Engineering Physics</td>
+                    <td>35</td>
+                    <td>28</td>
+                    <td>7</td>
+                    <td class="warning">60%</td>
+                </tr>
+                <tr>
+                    <td>Basic Electrical and Electrons Engineering</td>
+                    <td>40</td>
+                    <td>33</td>
+                    <td>7</td>
+                    <td class="good">82.5%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="page">
+    <h2 class="page-title">Contact Us</h2>
+    <div class="contact-card">
+        <p><strong>Email:</strong> contact@mgmcen.ac.in</p>
+        <p><strong>Phone:</strong> +91 2462 222999</p>
+        <p><strong>Address:</strong> Near Airport, Nanded, Maharashtra 431605</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Smart Campus - MGM's College of Engineering, Nanded.</p>
+    <p>All rights reserved.</p>
+</footer>
+
+<!-- LOGIN ADDITION: role bar + teacher editing -->
+<script src="auth.js"></script>
+
+</body>
+</html>

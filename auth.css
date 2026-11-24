@@ -1,0 +1,192 @@
+.login-body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.login-box {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 28px;
+    border-radius: 12px;
+    border-top: 6px solid #123b72;
+    box-shadow: 0 4px 18px #ccc;
+}
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.login-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.login-brand h1 {
+    color: #123b72;
+    font-size: 24px;
+}
+
+.login-brand p {
+    color: #555;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.role-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.role-tab {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #123b72;
+    background: white;
+    color: #123b72;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.role-tab.active {
+    background: #123b72;
+    color: white;
+}
+
+.login-box label {
+    display: block;
+    font-weight: bold;
+    color: #123b72;
+    margin: 12px 0 6px;
+    font-size: 14px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.login-box input:focus {
+    outline: 2px solid #123b72;
+    border-color: #123b72;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    font-size: 16px;
+    background: #123b72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0b2a52;
+}
+
+.login-error {
+    color: #c0392b;
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 18px;
+}
+
+.login-hint {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f4f7fb;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* ===== LOGGED-IN BAR (index.html) ===== */
+.userbar {
+    background: #0b2a52;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6%;
+    font-size: 14px;
+}
+
+.role-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: #2e7d32;
+}
+
+.role-badge.teacher {
+    background: #e08a00;
+}
+
+.logout-btn {
+    background: white;
+    color: #123b72;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== TEACHER EDIT TOOLBAR ===== */
+.edit-toolbar {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 200;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 14px #888;
+}
+
+.edit-toolbar button {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: #123b72;
+}
+
+.edit-toolbar .save-btn { background: #2e7d32; }
+.edit-toolbar .reset-btn { background: #c0392b; }
+
+body.editing .page [contenteditable="true"] {
+    outline: 2px dashed #e08a00;
+    outline-offset: 2px;
+    cursor: text;
+}
+
+body.editing .page [contenteditable="true"]:focus {
+    outline: 2px solid #e08a00;
+    background: #fff8e6;
+}

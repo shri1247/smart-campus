@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Smart Campus</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body class="login-body">
+
+<main class="login-box">
+    <div class="login-brand">
+        <img src="images.jpg" alt="MGM Logo" class="login-logo">
+        <h1>SMART CAMPUS</h1>
+        <p>MGM's College of Engineering, Nanded</p>
+    </div>
+
+    <div class="role-tabs" role="tablist">
+        <button type="button" class="role-tab active" data-role="student">Student</button>
+        <button type="button" class="role-tab" data-role="teacher">Teacher</button>
+    </div>
+
+    <form id="loginForm" autocomplete="off">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <p id="loginError" class="login-error" role="alert"></p>
+
+        <button type="submit" class="main-btn login-btn" id="loginBtn">Log in as Student</button>
+    </form>
+
+    <p class="login-hint">
+        Demo logins<br>
+        Student: <b>student</b> / <b>student123</b><br>
+        Teacher: <b>teacher</b> / <b>teacher123</b>
+    </p>
+</main>
+
+<script>
+    // Demo accounts. Replace with a real server check later.
+    const USERS = [
+        { username: "student", password: "student123", role: "student", name: "Student" },
+        { username: "teacher", password: "teacher123", role: "teacher", name: "Teacher" }
+    ];
+
+    // Already logged in? Go straight to the site.
+    if (sessionStorage.getItem("sc_user")) {
+        location.replace("index.html");
+    }
+
+    let selectedRole = "student";
+    const tabs = document.querySelectorAll(".role-tab");
+    const btn = document.getElementById("loginBtn");
+    const errorBox = document.getElementById("loginError");
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+            tabs.forEach(function (t) { t.classList.remove("active"); });
+            tab.classList.add("active");
+            selectedRole = tab.dataset.role;
+            btn.textContent = "Log in as " + (selectedRole === "teacher" ? "Teacher" : "Student");
+            errorBox.textContent = "";
+        });
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const u = document.getElementById("username").value.trim();
+        const p = document.getElementById("password").value;
+
+        const match = USERS.find(function (x) {
+            return x.username === u && x.password === p && x.role === selectedRole;
+        });
+
+        if (!match) {
+            errorBox.textContent = "Wrong username, password or role. Check the selected tab and try again.";
+            return;
+        }
+
+        sessionStorage.setItem("sc_user", JSON.stringify({ username: match.username, role: match.role, name: match.name }));
+        location.replace("index.html");
+    });
+</script>
+</body>
+</html>
